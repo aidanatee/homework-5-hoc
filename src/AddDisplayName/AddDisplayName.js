@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 /*
   Напишите простой HOC и укажите для него displayName
 */
-class AddDisplayName extends React.Component {
+class AddDisplayName extends Component {
 
   render() {
     return withDisplayName(WrappedComponent)

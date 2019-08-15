@@ -16,4 +16,14 @@ import React from 'react';
   стиль 'background: red'
 */
 
-//export const withRedBackground
+export const withRedBackground = (WrappedComponent) => {
+  return class extends WrappedComponent {
+    render() {
+      const parent = super.render();
+      if (parent.type == 'button') {
+        return <button style={{background: 'red'}}></button>
+      }
+
+    }
+  }
+}
