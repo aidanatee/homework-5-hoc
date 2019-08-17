@@ -19,7 +19,7 @@ export const wrapWithAbsolutePosition = (WrappedComponent) => {
     render() {
       return (
         <div style = {{position: 'absolute'}}>
-          <WrappedComponent render={this.props.render} {...this.props}/>
+          <WrappedComponent />
         </div>
       )
     }

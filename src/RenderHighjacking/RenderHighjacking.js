@@ -21,9 +21,8 @@ export const withRedBackground = (WrappedComponent) => {
     render() {
       const parent = super.render();
       if (parent.type == 'button') {
-        return <button style={{background: 'red'}}></button>
+        return React.cloneElement(parent, { style: { background: 'red' } });
       }
-
     }
   }
 }
